@@ -29,7 +29,10 @@ const config: Config = {
     },
   },
   plugins: [
-    daisyui,
+    require("daisyui"),
   ],
+  daisyui: {
+    themes: ["cupcake", "corporate"],
+  },
 };
 export default config;

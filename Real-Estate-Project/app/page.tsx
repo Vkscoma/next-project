@@ -1,15 +1,13 @@
-import Link from 'next/link'
-
+import Link from "next/link";
+import Hero from "../components/Hero";
+import InfoBoxes from "@/components/InfoBoxes";
 const HomePage = () => {
   return (
     <>
-      <div className="text-3xl">Home Page</div>
-      <Link href={{
-        pathname: '/properties',
-        query: { id: '1' }
-      }} className='hover:text-blue-500'>Properties Page</Link>
+      <Hero />
+      <InfoBoxes />
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
