@@ -10,7 +10,7 @@ import { FaGoogle } from "react-icons/fa";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume this state determines if the user is logged in or not
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume this state determines if the user is logged in or not
 
   const pathname = usePathname();
 
@@ -71,12 +71,22 @@ const Navbar = () => {
                 <li key={index}>
                   <Link
                     href={menu.link}
-                    className="menu-title text-light hover:bg-secondary rounded-lg"
+                    className={`${
+                      pathname === menu.link ? "active" : ""
+                    } "menu-title text-light hover:bg-secondary rounded-lg md:text-2xl"`}
                   >
                     {menu.name}
                   </Link>
                 </li>
               ))}
+              {!isLoggedIn && (
+                <li>
+                  <button className="btn btn-primary text-light w-full mt-2 sm:hidden">
+                    <FaGoogle className="text-light" />
+                    Log in or Register
+                  </button>
+                </li>
+              )}
             </ul>
           )}
         </div>
@@ -106,7 +116,7 @@ const Navbar = () => {
             <div className="flex items-center">
               <button className="flex items-center text-white bg-gray-700 hover:bg-primary hover:text-white rounded-md px-3 py-2 transition-all ease-in-out duration-200">
                 <FaGoogle className="text-light mr-2" />
-                <span>Sign In</span>
+                <span>Log in or Register</span>
               </button>
             </div>
           </div>
