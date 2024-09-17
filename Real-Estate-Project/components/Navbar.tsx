@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-light text-dark">
       <div className="navbar-start">
-        <div className="dropdown">
+        <div className="dropdown ml-2">
           <button
             type="button"
             role="button"
@@ -65,7 +65,7 @@ const Navbar = () => {
           {isMenuOpen && (
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-secondary rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-primary rounded-box mt-3 w-52 p-2 shadow z-20"
             >
               {menuData.map((menu, index) => (
                 <li key={index}>
@@ -73,7 +73,7 @@ const Navbar = () => {
                     href={menu.link}
                     className={`${
                       pathname === menu.link ? "active" : ""
-                    } "menu-title text-light hover:bg-secondary rounded-lg md:text-2xl"`}
+                    } "menu-title text-light hover:bg-third rounded-lg md:text-2xl"`}
                   >
                     {menu.name}
                   </Link>
