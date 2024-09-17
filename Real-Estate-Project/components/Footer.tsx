@@ -15,7 +15,7 @@ const Footer = () => {
   ];
   return (
     <footer className="footer footer-center bg-base-300 text-base-content p-4 mt-24">
-      <aside className="flex justify-between items-center w-full">
+      <aside className="flex md:justify-between items-center w-full flex-col">
         <div className="flex justify-center items-center ">
           <Image src={logo} alt="logo" width={40} height={40} />
           {footerData.map((footer, index) => (
