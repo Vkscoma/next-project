@@ -1,7 +1,17 @@
 import Image from "next/image";
 import home_hero from "@/assets/images/home_hero.jpg";
+import Button from "@/components/Button";
 
 const Hero = () => {
+  const customButtonStyle = {
+    marginLeft: "1rem",
+    width: "8rem",
+    "@media (max-width: 768px)": {
+      margin: "1rem auto",
+      marginTop: "1rem",
+      width: "100%",
+    },
+  };
   return (
     <div className="flex relative justify-center items-center max-w-full min-h-96 text-light">
       {/* Background Image */}
@@ -32,9 +42,12 @@ const Hero = () => {
               className="md:w-96 input input-bordered text-neutral-700 rounded-lg"
               placeholder="Enter a location (e.g. city, state, zip)"
             />
-            <button className="btn md:ml-2 md:mt-0 mt-4 rounded-xl border-solid border-2 w-32 mx-auto duration-200 ease-in-out transition-all">
+            {/* <button className="btn bg-blue2 border-none md:ml-2 md:mt-0 mt-4 rounded-xl w-32 mx-auto duration-200 ease-in-out transition-all">
               Search
-            </button>
+            </button> */}
+            <Button className="md:ml-2 md:mt-0 mt-4 w-32 mx-auto">
+              Search
+            </Button>
           </div>
         </div>
       </div>

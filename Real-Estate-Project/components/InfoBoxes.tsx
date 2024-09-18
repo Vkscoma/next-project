@@ -15,7 +15,7 @@ const InfoBoxes = () => {
       description:
         "List your property for rent or sale today! Rent as an Airbnb or sell your property.",
       buttonText: "Add Property",
-      backgroundColor: "#4b18e8",
+      backgroundColor: "#3b4b6f",
       link: "/properties/add",
     },
   ];

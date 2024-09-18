@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Button from "@/components/Button";
 
 interface InfoBoxProps {
   title: string;
@@ -31,7 +32,7 @@ const InfoBox: React.FC<InfoBoxProps> = ({
           <p>{description}</p>
           <div className="card-actions md:mt-2 mt-4 mx-auto md:mx-0">
             <Link href={link}>
-              <button className="btn text-dark rounded-lg">{buttonText}</button>
+              <Button>{buttonText}</Button>
             </Link>
           </div>
         </div>

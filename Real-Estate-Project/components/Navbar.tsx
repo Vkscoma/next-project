@@ -10,7 +10,7 @@ import { FaGoogle } from "react-icons/fa";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume this state determines if the user is logged in or not
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume this state determines if the user is logged in or not
 
   const pathname = usePathname();
 
