@@ -10,7 +10,7 @@ import { FaGoogle } from "react-icons/fa";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Assume this state determines if the user is logged in or not
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // Assume this state determines if the user is logged in or not
 
   const pathname = usePathname();
 
@@ -125,7 +125,7 @@ const Navbar = () => {
             <Link href="/messages" className="relative group">
               <button
                 type="button"
-                className="relative rounded-full bg-primary p-1 text-light hover:text-accent_dark focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 transition-all ease-in-out duration-200"
+                className="relative rounded-full bg-primary p-1 text-light hover:shadow-lg hover:shadow-dark focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 transition-all ease-in-out duration-200"
               >
                 <span className="absolute -inset-1.5"></span>
                 <span className="sr-only">View notifications</span>
@@ -153,7 +153,7 @@ const Navbar = () => {
               <div className="custom--container">
                 <button
                   type="button"
-                  className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:shadow-lg hover:shadow-black transition-all ease-in-out duration-200"
+                  className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:shadow-lg hover:shadow-dark transition-all ease-in-out duration-200"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
@@ -181,7 +181,7 @@ const Navbar = () => {
               >
                 <Link
                   href="/profile.html"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
                   tabIndex={-1}
                   id="user-menu-item-0"
@@ -190,7 +190,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   href="/saved-properties.html"
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
                   tabIndex={-1}
                   id="user-menu-item-2"
@@ -198,10 +198,10 @@ const Navbar = () => {
                   Saved Properties
                 </Link>
                 <button
-                  className="block px-4 py-2 text-sm text-gray-700"
+                  className="block px-4 py-2 w-full text-left text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
                   tabIndex={-1}
-                  id="user-menu-item-2"
+                  id="user-menu-item-3"
                 >
                   Sign Out
                 </button>
