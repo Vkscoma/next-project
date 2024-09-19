@@ -65,7 +65,7 @@ const Navbar = () => {
           {isMenuOpen && (
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-primary rounded-box mt-3 w-52 p-2 shadow z-20"
+              className="menu md:menu-lg menu-sm dropdown-content bg-primary rounded-box mt-3 w-52 p-2 shadow z-20"
             >
               {menuData.map((menu, index) => (
                 <li key={index}>
