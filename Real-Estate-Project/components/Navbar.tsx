@@ -93,17 +93,17 @@ const Navbar = () => {
       </div>
       <div className="navbar-center">
         <div className="flex items-center justify-center">
-          <Image
-            className="cursor-pointer"
-            src={logo}
-            width={80}
-            height={50}
-            alt="property logo"
-          />
           <Link
-            className="text-lg text-dark font-semibold cursor-pointer"
+            className="flex items-center text-lg text-dark font-semibold cursor-pointer"
             href="/"
           >
+            <Image
+              className="cursor-pointer"
+              src={logo}
+              width={120}
+              height={120}
+              alt="property logo"
+            />
             <div className="hide--on--mobile">
               <span className="text-primary">Property</span> Finder
             </div>
