@@ -71,6 +71,7 @@ const Navbar = () => {
                 <li key={index}>
                   <Link
                     href={menu.link}
+                    onClick={handleMenu}
                     className={`${
                       pathname === menu.link ? "active" : ""
                     } "menu-title text-light hover:bg-third rounded-lg md:text-2xl"`}
