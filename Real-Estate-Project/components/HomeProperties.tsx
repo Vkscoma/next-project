@@ -2,6 +2,7 @@ import properties from "@/properties.json";
 import PropertyCard from "@/components/PropertyCard";
 import Link from "next/link";
 import Button from "@/components/Button";
+import LoadingPage from "@/app/loading";
 
 const HomeProperties = () => {
   const recentProperties = properties.slice(0, 3);
