@@ -1,11 +1,15 @@
-import properties from "@/properties.json";
 import PropertyCard from "@/components/PropertyCard";
 import Link from "next/link";
 import Button from "@/components/Button";
-import LoadingPage from "@/app/loading";
+import connectDB from "@/config/database";
+import Property from "@/models/Property";
 
-const HomeProperties = () => {
-  const recentProperties = properties.slice(0, 3);
+const HomeProperties = async () => {
+  await connectDB();
+  const recentProperties = await Property.find({})
+    .sort({ createdAt: -1 })
+    .limit(3)
+    .lean();
   return (
     <>
       <section className="px-4 py-6">
@@ -13,7 +17,7 @@ const HomeProperties = () => {
           <h2 className="text-3xl font-semibold text-center mb-6">
             Featured Properties
           </h2>
-          {properties.length === 0 ? (
+          {recentProperties.length === 0 ? (
             <h1>No properties found</h1>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

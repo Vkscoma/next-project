@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import home_hero from "@/assets/images/home_hero.jpg";
 
 import {
   FaBed,
@@ -28,6 +27,7 @@ interface Property {
     zipcode: string;
   };
   _id: string;
+  images: string[];
 }
 
 const PropertyCard = ({ property }: { property: Property }) => {
@@ -45,7 +45,13 @@ const PropertyCard = ({ property }: { property: Property }) => {
   return (
     <div className="card bg-base-100 md:w-96 w-full shadow-xl">
       <figure>
-        <Image src={home_hero} alt="Property Image" />
+        <Image
+          src={`/properties/${property.images[0]}`}
+          alt="Property Image"
+          width={0}
+          height={0}
+          layout="responsive"
+        />
       </figure>
       <div className="card-body">
         <h2 className="text-slate-400 text-lg">{property.type}</h2>
